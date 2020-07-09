@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
+
 import { gradeRouter } from './routes/gradeRouter.js';
 import { logger } from './config/logger.js';
 import { db } from './models/index.js';
@@ -27,7 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:3000',
   })
 );
 
